@@ -5,7 +5,10 @@ import os
 # 1280 x 800 game resolution
 # image = grab_screen(region=(550, 300, 1349, 749))
 from utils.grab_screen import grab_screen
+from utils.getkeys import key_check
 
+image_data = []
+keys_pressed = []
 while True:
     last_time = time.time()
     image = grab_screen(region=(550, 300, 1349, 749))
@@ -15,4 +18,13 @@ while True:
     image = cv2.resize(image, (224, 224))
     cv2.imshow("Image", image)
     cv2.waitKey(1)
-    print('loop took {} seconds'.format(time.time() - last_time))
+
+    image = np.array(image)
+    image_data.append(image)
+
+    keys = key_check()
+    keys_pressed.append(keys)
+    if keys == 'H':
+        break
+    print(f"{keys} pressed")
+    # print('loop took {} seconds'.format(time.time() - last_time))
