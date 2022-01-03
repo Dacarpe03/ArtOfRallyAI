@@ -17,4 +17,4 @@ def key_check():
     elif 'H' in keys:
         return 'H'
     else:
-        return 'Nothing'
+        return 'N'
