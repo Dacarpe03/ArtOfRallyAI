@@ -15,9 +15,12 @@ Finally we convert those numpy array into .png files using [create_images.py](ht
 
 ## Neuronal Network training
 
-The neuronal network that we will be using will be [resnet18](https://www.mathworks.com/help/deeplearning/ref/resnet18.html), a convolutional neuronal network that has a pretrained version which can classify images into 1000 object categories, including vehicles. The purpose here is that we train the network with our images so that it can detect the edges of the road and position of the car to steer it left or right. Using google colab, which provides free GPU computing, we can run [training.ipynb](https://github.com/Dacarpe03/ArtOfRallyAI/blob/main/training.ipynb) after uploading our images to Google Drive.
-After choosing a learning rate that minimizes the loss of the network (using fastai [lr_find](https://fastai1.fast.ai/callbacks.lr_finder.html) built in function) we train it with our images.
+The neuronal network that we will be using will be [resnet18](https://www.mathworks.com/help/deeplearning/ref/resnet18.html), a convolutional neuronal network that has a pretrained version which can classify images into 1000 object categories, including vehicles. The purpose here is that we train the network with our images so that it can detect the edges of the road and position of the car to steer it left or right. Using google colab, which provides free GPU computing, we can run [training.ipynb](https://github.com/Dacarpe03/ArtOfRallyAI/blob/main/training.ipynb) after uploading our images to Google Drive.  
+We can choose a learning rate that minimizes the loss of the network using fastai [lr_find](https://fastai1.fast.ai/callbacks.lr_finder.html) built in function and then train it with our images.  
+In this case we will train the network with 20k images taken from three different circuits:
+![laampi](/readme_images/laampi.PNG) ![noormakku](/readme_images/noormakku.PNG) ![lassila](/readme_images/lassila.PNG)
+
 
 ## Trained agent
 
-
+Now we are ready to test the artificial intelligence.
