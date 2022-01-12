@@ -23,4 +23,4 @@ In this case we will train the network with 20k images taken from three differen
 
 ## Trained agent
 
-Now we are ready to test the artificial intelligence.
+Now we are ready to test the artificial intelligence. We will use the [trained_agent.py](https://github.com/Dacarpe03/ArtOfRallyAI/blob/main/trained_agent.py) script to use the trained CNN. Each 0.2 seconds this script will grab a region of the screen and then perform the Canny algorithm on that image as when we did during the image processing. That image will be passed to the neuronal network to predict the direction towards the car will steer.
